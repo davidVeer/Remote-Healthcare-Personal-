@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RM_Server", "RM_Server\RM_Server.csproj", "{E21EE202-D95D-47BD-B540-7B5B99D91796}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RH_Doctor_Simulator", "RH_Doctor_Simulator\RH_Doctor_Simulator.csproj", "{DCA4C81D-98C2-44B0-B79E-05BA10ABCBDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E21EE202-D95D-47BD-B540-7B5B99D91796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E21EE202-D95D-47BD-B540-7B5B99D91796}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E21EE202-D95D-47BD-B540-7B5B99D91796}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E21EE202-D95D-47BD-B540-7B5B99D91796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCA4C81D-98C2-44B0-B79E-05BA10ABCBDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCA4C81D-98C2-44B0-B79E-05BA10ABCBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCA4C81D-98C2-44B0-B79E-05BA10ABCBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCA4C81D-98C2-44B0-B79E-05BA10ABCBDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {BACFE7B7-DFB9-41AE-949C-7D8BA3A9D91E}
+		SolutionGuid = {C3DF0F06-10D7-482F-804E-79C2991599C7}
 	EndGlobalSection
 EndGlobal
