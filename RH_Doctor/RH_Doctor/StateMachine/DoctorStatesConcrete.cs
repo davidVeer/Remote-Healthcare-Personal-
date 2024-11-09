@@ -5,7 +5,9 @@ namespace RH_Doctor.StateMachine {
     internal class Connect(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
         public override void PerformAction(string ActionCommand) {
-            throw new NotImplementedException();
+            if (ActionCommand.Equals("Connect")) {
+                protocol.ConnectToServer("192.168.1.106");
+            }
         }
 
         public override void RespondToMessage(string RecievedMessage) {

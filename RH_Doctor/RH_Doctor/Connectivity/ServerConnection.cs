@@ -4,24 +4,26 @@ using System.Net.Sockets;
 
 namespace RH_Doctor.Connectivity {
     internal class ServerConnection {
-        public readonly TcpClient doctorClient;
-        private PatientMonitoring PatientLog;
+        public TcpClient DoctorClient { get; private set; }
+        public PatientMonitoring PatientLog { get; set; }
         private DoctorStateAbstract activeState;
 
         public ServerConnection() {
-
+            this.activeState = new Connect(this);
+            PatientLog = new PatientMonitoring();
+            this.activeState.PerformAction("Connect");
         }
 
         public async Task ReadMessagesAsync() {
             throw new NotImplementedException();
         }
 
-        public void ConnectToServer() {
-            throw new NotImplementedException();
+        public void ConnectToServer(String IP_Adress) {
+            DoctorClient = new TcpClient(IP_Adress, 4790);
         }
 
         public void ChangeActiveState(DoctorStateAbstract newState) {
-            throw new NotImplementedException();
+            this.activeState = newState;
         }
     }
 }
