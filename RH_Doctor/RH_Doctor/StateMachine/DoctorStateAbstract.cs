@@ -15,6 +15,6 @@ namespace RH_Doctor.StateMachine {
 
         public abstract void PerformAction(String ActionCommand);
 
-        public abstract void RespondToMessage(String RecievedMessage);
+        public abstract Task RespondToMessage(String RecievedMessage);
     }
 }
