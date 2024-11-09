@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RH_Doctor.Forms {
-    public partial class OverviewForm : UserControl {
-        public OverviewForm() {
+    public partial class OverView : UserControl {
+        public OverView() {
             InitializeComponent();
         }
     }
