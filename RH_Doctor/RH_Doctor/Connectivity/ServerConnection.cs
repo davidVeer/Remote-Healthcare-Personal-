@@ -16,7 +16,13 @@ namespace RH_Doctor.Connectivity {
         }
 
         public async Task ReadMessagesAsync() {
-            throw new NotImplementedException();
+            while (DoctorClient.Connected) {
+                String R_Message;
+                if ((R_Message = MessageCommunication.RecieveMessage(networkStream)) == null)
+                    break;
+            
+                await activeState.RespondToMessage(R_Message);
+            }
         }
 
         public void ConnectToServer(String IP_Adress) {
