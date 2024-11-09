@@ -6,12 +6,12 @@ namespace RH_Doctor.StateMachine {
 
         public override void PerformAction(string ActionCommand) {
             if (ActionCommand.Equals("Connect")) {
-                protocol.ConnectToServer("192.168.1.106");
+                protocol.ConnectToServer("192.168.0.131");
             }
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
-            throw new NotImplementedException();
+        public override async Task RespondToMessage(string RecievedMessage) {
+
         }
     }
 
@@ -21,7 +21,7 @@ namespace RH_Doctor.StateMachine {
             throw new NotImplementedException();
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
+        public override async Task RespondToMessage(string RecievedMessage) {
             throw new NotImplementedException();
         }
     }
@@ -32,7 +32,7 @@ namespace RH_Doctor.StateMachine {
             throw new NotImplementedException();
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
+        public override async Task RespondToMessage(string RecievedMessage) {
             throw new NotImplementedException();
         }
     }
@@ -43,7 +43,7 @@ namespace RH_Doctor.StateMachine {
             throw new NotImplementedException();
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
+        public override async Task RespondToMessage(string RecievedMessage) {
             throw new NotImplementedException();
         }
     }
@@ -54,7 +54,7 @@ namespace RH_Doctor.StateMachine {
             throw new NotImplementedException();
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
+        public override async Task RespondToMessage(string RecievedMessage) {
             throw new NotImplementedException();
         }
     }
@@ -65,7 +65,7 @@ namespace RH_Doctor.StateMachine {
             throw new NotImplementedException();
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
+        public override async Task RespondToMessage(string RecievedMessage) {
             throw new NotImplementedException();
         }
     }
@@ -76,7 +76,7 @@ namespace RH_Doctor.StateMachine {
             throw new NotImplementedException();
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
+        public override async Task RespondToMessage(string RecievedMessage) {
             throw new NotImplementedException();
         }
     }
@@ -87,7 +87,7 @@ namespace RH_Doctor.StateMachine {
             throw new NotImplementedException();
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
+        public override async Task RespondToMessage(string RecievedMessage) {
             throw new NotImplementedException();
         }
     }
@@ -98,7 +98,7 @@ namespace RH_Doctor.StateMachine {
             throw new NotImplementedException();
         }
 
-        public override void RespondToMessage(string RecievedMessage) {
+        public override async Task RespondToMessage(string RecievedMessage) {
             throw new NotImplementedException();
         }
     }

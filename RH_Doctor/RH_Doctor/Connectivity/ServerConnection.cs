@@ -13,10 +13,17 @@ namespace RH_Doctor.Connectivity {
             this.activeState = new Connect(this);
             PatientLog = new PatientMonitoring();
             this.activeState.PerformAction("Connect");
+            Task.Run(ReadMessagesAsync);
         }
 
         public async Task ReadMessagesAsync() {
-            throw new NotImplementedException();
+            while (DoctorClient.Connected) {
+                String R_Message;
+                if ((R_Message = MessageCommunication.RecieveMessage(networkStream)) == null)
+                    break;
+            
+                await activeState.RespondToMessage(R_Message);
+            }
         }
 
         public void ConnectToServer(String IP_Adress) {
