@@ -16,12 +16,14 @@ namespace RH_Server_Simulator {
                 if (PatientListner.Pending()) {
                     TcpClient Patient = PatientListner.AcceptTcpClient();
                     MessageCommunication.SendMessage(Patient.GetStream(), "Welcome Patient");
+                    Console.WriteLine($"Welcome Patient");
                     Thread PatientThread = new Thread(async () => HandleClient(Patient));
                     PatientThread.Start();
                 }
                 if (DoctorListner.Pending()) {
                     TcpClient doctor = DoctorListner.AcceptTcpClient();
                     MessageCommunication.SendMessage(doctor.GetStream(), "Enter Login Data");
+                    Console.WriteLine($"Enter Login Data");
                     Thread doctorThread = new Thread(async () => HandleClient(doctor));
                     doctorThread.Start();
                 }
