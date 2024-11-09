@@ -5,6 +5,7 @@ using System.Net.Sockets;
 namespace RH_Doctor.Connectivity {
     internal class ServerConnection {
         public TcpClient DoctorClient { get; private set; }
+        public NetworkStream networkStream { get; private set; }
         public PatientMonitoring PatientLog { get; set; }
         private DoctorStateAbstract activeState;
 
@@ -20,6 +21,7 @@ namespace RH_Doctor.Connectivity {
 
         public void ConnectToServer(String IP_Adress) {
             DoctorClient = new TcpClient(IP_Adress, 4790);
+            this.networkStream = DoctorClient.GetStream();
         }
 
         public void ChangeActiveState(DoctorStateAbstract newState) {
