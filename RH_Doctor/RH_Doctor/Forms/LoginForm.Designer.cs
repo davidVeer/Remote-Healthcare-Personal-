@@ -65,7 +65,6 @@
             IDBox.Name = "IDBox";
             IDBox.Size = new Size(197, 23);
             IDBox.TabIndex = 3;
-            IDBox.Text = "Enter ID number";
             // 
             // NameBox
             // 
@@ -73,7 +72,6 @@
             NameBox.Name = "NameBox";
             NameBox.Size = new Size(197, 23);
             NameBox.TabIndex = 4;
-            NameBox.Text = "Enter Name";
             // 
             // PasswordBox
             // 
@@ -81,7 +79,6 @@
             PasswordBox.Name = "PasswordBox";
             PasswordBox.Size = new Size(197, 23);
             PasswordBox.TabIndex = 5;
-            PasswordBox.Text = "Enter Password";
             // 
             // LoginButton
             // 

@@ -1,17 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RH_Doctor.Connectivity;
+
 using System.Windows.Forms;
 
 namespace RH_Doctor.Forms {
-    public partial class OverView : UserControl {
-        public OverView() {
+    internal partial class OverView : UserControl {
+        public readonly Form mainForm;
+        public readonly ServerConnection serverConnection;
+
+        public OverView(Form mainForm, ServerConnection serverConnection) {
             InitializeComponent();
+            this.mainForm = mainForm;
+            this.serverConnection = serverConnection;
         }
     }
 }

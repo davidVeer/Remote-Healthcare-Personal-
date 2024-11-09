@@ -1,12 +1,6 @@
 ﻿using RH_Doctor.ActiveData;
 using RH_Doctor.StateMachine;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace RH_Doctor.Connectivity {
     internal class ServerConnection {
@@ -15,7 +9,7 @@ namespace RH_Doctor.Connectivity {
         private DoctorStateAbstract activeState;
 
         public ServerConnection() {
-            throw new NotImplementedException();
+
         }
 
         public async Task ReadMessagesAsync() {
