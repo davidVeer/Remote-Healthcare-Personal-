@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RH_Server_Simulation", "RH_Server_Simulation\RH_Server_Simulation.csproj", "{512778F4-FEE2-4A6F-A906-746F6EDE419C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{512778F4-FEE2-4A6F-A906-746F6EDE419C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{512778F4-FEE2-4A6F-A906-746F6EDE419C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{512778F4-FEE2-4A6F-A906-746F6EDE419C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{512778F4-FEE2-4A6F-A906-746F6EDE419C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {336A1DAF-6978-4A8E-BBBB-91C47845458B}
+	EndGlobalSection
+EndGlobal
