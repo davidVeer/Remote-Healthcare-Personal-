@@ -21,11 +21,10 @@ namespace RH_Doctor.Connectivity {
             }
         }
 
-        public static String RecieveMessage(NetworkStream recievingStream, String MessageToSend) {
+        public static String RecieveMessage(NetworkStream recievingStream) {
             try {
                 var stream = new StreamReader(recievingStream, Encoding.ASCII, true, 128);
-                String line = stream.ReadLine();
-                return line;
+                return stream.ReadLine(); ;
             } catch (IOException exception) {
                 return "Connection With Host Was Lost";
             }
