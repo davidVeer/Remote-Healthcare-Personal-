@@ -3,11 +3,11 @@ namespace RH_Doctor {
 
         [STAThread]
         static void Main(String[] args) {
-
+            throw new NotImplementedException();
         }
 
         private static void StartupGui() { 
-        
+            throw new NotImplementedException();
         }
 
     }
