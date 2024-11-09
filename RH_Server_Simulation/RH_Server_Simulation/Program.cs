@@ -32,16 +32,19 @@ namespace RH_Server_Simulator {
 
         private static void HandleClient(TcpClient tcpClient) {
             NetworkStream networkStream = tcpClient.GetStream();
+            Task.Run(async () => ReadMessages(networkStream, tcpClient));
+            while (tcpClient.Connected) {
+                MessageCommunication.SendMessage(networkStream, Console.ReadLine());
+            }
+        }
+
+        private static async Task ReadMessages(NetworkStream networkStream, TcpClient tcpClient) {
             while (tcpClient.Connected) {
                 String R_message;
-                String S_message;
                 if ((R_message = MessageCommunication.ReceiveMessage(networkStream)) == null) {
                     continue;
                 }
-
                 Console.WriteLine($"{R_message}");
-                S_message = Console.ReadLine();
-                MessageCommunication.SendMessage(networkStream, S_message);
             }
         }
     }
