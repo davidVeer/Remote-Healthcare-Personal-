@@ -1,0 +1,20 @@
+﻿using RH_Doctor.Connectivity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RH_Doctor.StateMachine {
+    internal abstract class DoctorStateAbstract {
+        protected ServerConnection protocol;
+
+        public DoctorStateAbstract(ServerConnection protocol) {
+            this.protocol = protocol;
+        }
+
+        public abstract void PerformAction(String ActionCommand);
+
+        public abstract void RespondToMessage(String RecievedMessage);
+    }
+}
