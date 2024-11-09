@@ -32,7 +32,7 @@ namespace RH_Server_Simulator {
 
         private static void HandleClient(TcpClient tcpClient) {
             NetworkStream networkStream = tcpClient.GetStream();
-            Task.Run(async () => ReadMessages(networkStream, tcpClient));
+            Task.Run(async () => await ReadMessages(networkStream, tcpClient));
             while (tcpClient.Connected) {
                 MessageCommunication.SendMessage(networkStream, Console.ReadLine());
             }
