@@ -1,45 +1,104 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RH_Doctor.Connectivity;
 
 namespace RH_Doctor.StateMachine {
 
-    internal class Connect : DoctorStateAbstract {
-    
+    internal class Connect(ServerConnection protocol) : DoctorStateAbstract(protocol) {
+
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
-    internal class Login : DoctorStateAbstract {
+    internal class Login(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
-    internal class EnterCommand : DoctorStateAbstract {
+    internal class EnterCommand(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
-    internal class Subscribe : DoctorStateAbstract {
+    internal class Subscribe(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
-    internal class Unsubscribe : DoctorStateAbstract {
+    internal class Unsubscribe(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
-    internal class StartSession : DoctorStateAbstract {
+    internal class StartSession(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
-    internal class EndSession : DoctorStateAbstract {
+    internal class EndSession(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
-    internal class SendData : DoctorStateAbstract {
+    internal class SendData(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
-    internal class FethData : DoctorStateAbstract {
+    internal class FethData(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
+        public override void PerformAction(string ActionCommand) {
+            throw new NotImplementedException();
+        }
+
+        public override void RespondToMessage(string RecievedMessage) {
+            throw new NotImplementedException();
+        }
     }
 
 }
