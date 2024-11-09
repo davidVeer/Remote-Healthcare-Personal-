@@ -6,12 +6,12 @@ namespace RH_Doctor.StateMachine {
 
         public override void PerformAction(string ActionCommand) {
             if (ActionCommand.Equals("Connect")) {
-                protocol.ConnectToServer("192.168.1.106");
+                protocol.ConnectToServer("192.168.0.131");
             }
         }
 
         public override async Task RespondToMessage(string RecievedMessage) {
-            throw new NotImplementedException();
+
         }
     }
 

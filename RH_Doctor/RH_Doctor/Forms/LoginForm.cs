@@ -9,7 +9,6 @@ namespace RH_Doctor.Forms {
             InitializeComponent();
             this.mainForm = mainForm;
             serverConnection = new ServerConnection();
-            Task.Run(async () => await serverConnection.ReadMessagesAsync());
         }
 
         private void LoginButton_Click(object sender, EventArgs e) {

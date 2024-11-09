@@ -13,6 +13,7 @@ namespace RH_Doctor.Connectivity {
             this.activeState = new Connect(this);
             PatientLog = new PatientMonitoring();
             this.activeState.PerformAction("Connect");
+            Task.Run(ReadMessagesAsync);
         }
 
         public async Task ReadMessagesAsync() {
