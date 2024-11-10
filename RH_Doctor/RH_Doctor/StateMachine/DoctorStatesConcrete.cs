@@ -1,4 +1,5 @@
 using RH_Doctor.Connectivity;
+using System.Text.RegularExpressions;
 
 namespace RH_Doctor.StateMachine {
 
@@ -20,12 +21,21 @@ namespace RH_Doctor.StateMachine {
 
     internal class Login(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
-        public override void PerformAction(string ActionCommand) {
-            throw new NotImplementedException();
+        public override void PerformAction(string loginMessage) {
+            Regex JsonRegex = new Regex("^\\{.+\\}$");
+            if (JsonRegex.IsMatch(loginMessage)) {
+                MessageCommunication.SendMessage(protocol.networkStream, loginMessage);
+            }
+
+
         }
 
         public override async Task RespondToMessage(string RecievedMessage) {
-            throw new NotImplementedException();
+            if (RecievedMessage.Equals(ValidMessages.d_correctLogin)) {
+                protocol.ChangeActiveState(new EnterCommand(protocol));
+                //TODO: switch to Overview Form
+                return;
+            }
         }
     }
 
