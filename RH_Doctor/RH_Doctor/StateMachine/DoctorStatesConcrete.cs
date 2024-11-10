@@ -1,4 +1,4 @@
-﻿using RH_Doctor.Connectivity;
+using RH_Doctor.Connectivity;
 
 namespace RH_Doctor.StateMachine {
 
@@ -11,7 +11,10 @@ namespace RH_Doctor.StateMachine {
         }
 
         public override async Task RespondToMessage(string RecievedMessage) {
-
+            if (RecievedMessage.Equals(ValidMessages.d_enterLogin)) {
+                protocol.ChangeActiveState(new Login(protocol));
+                return;
+            }
         }
     }
 
