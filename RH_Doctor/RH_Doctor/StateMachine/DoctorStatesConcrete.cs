@@ -1,4 +1,5 @@
 using RH_Doctor.Connectivity;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 
 namespace RH_Doctor.StateMachine {
@@ -22,7 +23,6 @@ namespace RH_Doctor.StateMachine {
     internal class Login(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
         public override void PerformAction(string loginMessage) {
-            Regex JsonRegex = new Regex("^\\{.+\\}$");
             if (JsonRegex.IsMatch(loginMessage)) {
                 MessageCommunication.SendMessage(protocol.networkStream, loginMessage);
             }
