@@ -1,4 +1,4 @@
-using RH_Doctor.Connectivity;
+﻿using RH_Doctor.Connectivity;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 
@@ -41,12 +41,42 @@ namespace RH_Doctor.StateMachine {
 
     internal class EnterCommand(ServerConnection protocol) : DoctorStateAbstract(protocol) {
 
-        public override void PerformAction(string ActionCommand) {
-            throw new NotImplementedException();
+        public override void PerformAction(string nextCommand) {
+            MessageCommunication.SendMessage(protocol.networkStream, nextCommand);
         }
 
         public override async Task RespondToMessage(string RecievedMessage) {
-            throw new NotImplementedException();
+            DoctorStateAbstract nextState;
+
+            if (JsonRegex.IsMatch(RecievedMessage)) {
+                //TODO: Should set RecievedMessage to message Extracted From Json
+            }
+
+
+            switch (RecievedMessage) {
+                case ValidMessages.d_startSessionResponse:
+                    nextState = new StartSession(protocol);
+                    break;
+                case ValidMessages.d_endSessionResponse:
+                    nextState = new EndSession(protocol);
+                    break;
+                case ValidMessages.d_subscribeResponse:
+                    nextState = new Subscribe(protocol);
+                    break;
+                case ValidMessages.d_unsubscribeResponse:
+                    nextState = new Unsubscribe(protocol);
+                    break;
+                case ValidMessages.d_sendDataResponse:
+                    nextState = new SendData(protocol);
+                    break;
+                case ValidMessages.d_retrieveDataResponse:
+                    nextState = new FethData(protocol);
+                    break;
+                default:
+                    return;
+            }
+
+            protocol.ChangeActiveState(nextState);
         }
     }
 
